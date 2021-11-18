@@ -8,16 +8,16 @@
 </head>
 <body>
     <h1>Expense Tracker</h1>
-    <h3>Add A New Item:</h3>
+    <h3>New Expense:</h3>
     <div>
         <form action="/adasd" id="expenseForm">
             <div class="expense-info">
                 <label for="description">Description:</label>
-                <input type="text" name="description" id="description" placeholder="Where was the expense made?" style="width: 200px">
+                <input type="text" name="description" id="description" placeholder="Where was the expense made?" style="width: 200px" autocomplete="off">
                 <label for="date">Date:</label>
-                <input type="date" name="date" id="date" placeholder="">
+                <input type="date" name="date" id="date" placeholder="" autocomplete="off">
                 <label for="amount">Amount</label>
-                <input type="text" name="amount" id="amount" placeholder="0.00"  >
+                <input type="text" class="decimal" name="amount" id="amount" placeholder="0.00" autocomplete="off">
             </div>
             <button>Add Expense</button>
         </form> 
