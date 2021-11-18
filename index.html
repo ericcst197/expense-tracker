@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <h3>Add A New Item:</h3>
+    <div>
+        <form action="/adasd" id="expenseForm">
+            <div class="expense-info">
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description" placeholder="Where was the expense made?" style="width: 200px">
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date" placeholder="">
+                <label for="amount">Amount</label>
+                <input type="text" name="amount" id="amount" placeholder="0.00"  >
+            </div>
+            <button>Add Expense</button>
+        </form> 
+    </div>
+    <div>
+        <table id="expenseTable">
+            <tr>
+                <td style="width: 200px;">Description</td>
+                <td style="width: 200px;">Date</td>
+                <td style="width: 200px;">Amount</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
