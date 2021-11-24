@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
 </head>
+
 <body>
     <h1>Expense Tracker</h1>
+    <h2>Your Balance
+        <p>$ <span class="total-balance"></span></p>
+    </h2>
+    <div class="balance">
+        <div>
+            <p>INCOME</p>
+            <p>$ <span class="income"></span></p>
+        </div>
+        <div>
+            <p>EXPENSE</p>
+            <p>$ <span class="expense"></span></p>
+        </div>
+    </div>
+
     <h3>New Expense:</h3>
+    <div>
+        <select name="type" id="type">
+            <option value="">-- Select --</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+    </div>
     <div>
         <form action="/adasd" id="expenseForm">
             <div class="expense-info">
                 <label for="description">Description:</label>
-                <input type="text" name="description" id="description" placeholder="Where was the expense made?" style="width: 200px" autocomplete="off">
+                <input type="text" name="description" id="description" placeholder="Where was the expense made?"
+                    style="width: 200px" autocomplete="off">
                 <label for="date">Date:</label>
                 <input type="date" name="date" id="date" placeholder="" autocomplete="off">
                 <label for="amount">Amount</label>
                 <input type="text" class="decimal" name="amount" id="amount" placeholder="0.00" autocomplete="off">
             </div>
             <button>Add Expense</button>
-        </form> 
+        </form>
     </div>
     <div>
         <table id="expenseTable">
@@ -35,4 +59,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
