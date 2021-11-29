@@ -20,7 +20,7 @@ select.addEventListener("change", () => {
 //Form input validation
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!(description.value || date.value || amount.value)) {
+    if (!(description.value && date.value && amount.value)) {
         alert("Please fill in the form!")
     } else {
         if (select.value === "") {
