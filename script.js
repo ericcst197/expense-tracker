@@ -1,5 +1,5 @@
 const form = document.querySelector("#expenseForm");
-const table = document.querySelector("#expenseTable");
+const list = document.querySelector("#expenseList");
 const select = document.querySelector("#type");
 const total = document.querySelector(".total-balance");
 const income = document.querySelector(".income");
@@ -7,9 +7,9 @@ const expense = document.querySelector(".expense");
 const { description, date, amount } = form.elements;
 
 let zero = 0
-total.innerText = zero.toFixed(2);
-income.innerText = zero.toFixed(2);
-expense.innerText = zero.toFixed(2);
+total.textContent = zero.toFixed(2);
+income.textContent = zero.toFixed(2);
+expense.textContent = zero.toFixed(2);
 
 //Selection
 select.addEventListener("change", () => {
@@ -60,18 +60,18 @@ function addList(a, b, c) {
     const tdAmount = document.createElement("td");
     const delBtn = document.createElement("button");
     const formatNum = parseFloat(c).toFixed(2);
-    table.append(tr);
+    list.append(tr);
     tr.append(tdDescribe, tdDate, tdAmount, delBtn);
     tdDescribe.append(a);
     tdDate.append(b);
     tdAmount.append(formatNum);
     select.value === "income" ? tdAmount.classList.add("income") : tdAmount.classList.add("expense")
-    delBtn.innerHTML = "Delete";
-    delBtn.addEventListener("click", delList)
+    delBtn.innerHTML = '<i class="fas fa-trash"></i>';
+    delBtn.classList.add("trash");
+    delBtn.addEventListener("click", delList);
 }
 
 //Delete button function
-
 function delList() {
     const delValueIncome = () => {
         const calcTotal = parseFloat(total.innerText) - parseFloat(num.innerHTML);
@@ -88,13 +88,10 @@ function delList() {
 
     let li = this.parentNode;
     let num = this.parentNode.childNodes[2];
-    if (num.classList.value === "income") {
-        delValueIncome()
-    } else {
-        delValueExpense()
-    }
+    num.classList.value === "income"? delValueIncome() : delValueExpense()
     li.remove()
 }
+
 // Only allows Numbers and one decimal pont in textbox input
 function isNumberKey(evt) {
     let charCode = (evt.which) ? evt.which : evt.keyCode

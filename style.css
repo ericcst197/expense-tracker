@@ -1,0 +1,46 @@
+body{
+    background-color: #56aaff;
+    box-sizing: border-box;
+
+}
+
+.tracker{
+    background-color: rgb(219, 219, 219, 0.8);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.expense-table{
+    background-color: rgb(219, 219, 219, 0.8);
+    border-radius: 20px;
+    max-height: 44rem;
+}
+
+
+.col-md-12{ 
+    width: 100% !important; 
+}
+
+.balance p{
+    text-align: center;
+}
+
+.income{
+    color: green;
+    font-weight: 600;
+
+}
+
+.expense{
+    color: rgb(230, 72, 72);
+    font-weight: 600;
+}
+
+.trash{
+    color: white;
+    background-color: rgb(247, 107, 92) !important;
+    width: 2.5rem;
+    border: none;
+    margin-left: 10px;
+}
+
